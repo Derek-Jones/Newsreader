@@ -17,9 +17,15 @@ https://newsreader.scraperwiki.com/actors_of_a_type?uris.0=dbo:Company&filter=hi
 where: "highlighted_phrase" is extracted from the text highlighted, on a web page,
 by the user.
 
+Details of the 'simple' API are given here:
+https://newsreader.scraperwiki.com/
+
+All data requests have to go via hhtps, ie, the SPARQL endpoint is not
+externally visible.
+
 Format of the json returned by api call from:
 
-{
+   {
 
     "count": 1,  // number of pages available
 
@@ -29,7 +35,7 @@ Format of the json returned by api call from:
 
              ]
 
-}
+   }
 
 There is a count field, but this is nto of any use since it applies
 to all of the returned data, ie, the weight given to all fo it is
@@ -38,5 +44,5 @@ increase by the same amount.
 
 When there is no data matching the query the json returned is:
 
-{"error": "Result empty, possibly as a result of paging beyond results"}
+ {"error": "Result empty, possibly as a result of paging beyond results"}
 
